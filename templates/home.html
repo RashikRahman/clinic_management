@@ -34,7 +34,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="http://127.0.0.1:8000/home/"><font class="font-weight-bold" color="black" style="font-family: 'Poor Richard',serif">Clinic Management <i class="fa fa-hospital-alt"></i></font></a>
+                <a class="navbar-brand" href="/home/"><font class="font-weight-bold" color="black" style="font-family: 'Poor Richard',serif">Clinic Management <i class="fa fa-hospital-alt"></i></font></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -52,7 +52,7 @@
                                     <h5 class="mb-1 text-white nav-user-name"><font class="font-weight-bold" color="black">Rashik Rahman</font></h5>
                                     <span class="status"></span><span class="ml-1 mb-2"><i class="font-italic">Admin</i></span>
                                 </div>
-                                <a type="button" class="dropdown-item btn-rounded btn aqua-gradient mt-2" href="http://127.0.0.1:8000/login/"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a type="button" class="dropdown-item btn-rounded btn aqua-gradient mt-2" href="/login/"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -68,7 +68,7 @@
         <div class="nav-left-sidebar">
             <div class="menu-list">
                 <nav class="navbar navbar-expand-lg navbar-light font-weight-bold">
-                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <a class="d-xl-none d-lg-none" ><font color="black">Dashboard</font></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -78,19 +78,23 @@
                                 <font class="font-weight-bold" color="black">Menu</font>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="http://127.0.0.1:8000/home/"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+                                <a class="nav-link" href="/home/"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="http://127.0.0.1:8000/department/" ><i class="fa fa-fw fa-building"></i>Departments</a>
+                                <a class="nav-link" href="/department/" ><i class="fa fa-fw fa-building"></i>Departments</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="http://127.0.0.1:8000/services/"><i class="fas fa-fw fa-hands-helping"></i>Services</a>
+                                <a class="nav-link" href="/services/"><i class="fas fa-fw fa-hands-helping"></i>Services</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="#"><i class="fas fa-user-plus"></i>Doctors</a>
+                                <a class="nav-link" href="/doctors/"><i class="fas fa-user-plus"></i>Doctors</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" ><i class="fas fa-user"></i>Patients</a>
+                                <a class="nav-link" href="/patients/" ><i class="fas fa-user"></i>Patients</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/tests/" ><i class="fas fa-user"></i>Tests</a>
                             </li>
 
                             <li class="nav-item">
@@ -124,7 +128,7 @@
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="http://127.0.0.1:8000/home/" class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item"><a href="/home/" class="breadcrumb-link">Dashboard</a></li>
                                             <li class="breadcrumb-item active" aria-current="page">Home</li>
                                         </ol>
                                     </nav>
@@ -191,6 +195,7 @@
     <script src="/static/assets/libs/js/mdb.min.js"></script>
     <script src="/static/assets/libs/js/popper.min.js"></script>
     <script src="/static/assets/libs/js/all.js"></script>
+        </div>
+    </div>
 </body>
- 
 </html>

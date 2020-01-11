@@ -23,8 +23,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', views.login),
     path('home/', views.home),
+    path('patients/', views.patients),
     path('department/', views.department),
     path('', views.login),
     path('services/', views.services),
+    path('doctors/', views.doctors),
+    path('addpatient/', views.addpatient),
+    path('tests/', views.tests),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

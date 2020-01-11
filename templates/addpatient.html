@@ -127,7 +127,7 @@
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="/home/" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Departments</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Add Patients</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -137,127 +137,96 @@
                     <!-- ============================================================== -->
                     <!-- end pageheader  -->
                     <!-- ============================================================== -->
-            <div class="card container-fluid d-flex">
-              <div class="card-body">
-                <font class="font-weight-bold" color="black">Welcome To Department Panel</font>
-              </div>
-            </div>
+
 
             <!-- ============================================================== -->
 
             <section class="contact-section area-padding">
-                <!-- Editable table -->
+
                 <div class="container card">
-                  <h3 class="card-header text-center font-weight-bold text-uppercase py-4"><font color="black">Departments</font></h3>
+                  <h3 class="card-header text-left font-weight-bold  py-4"><font color="black">Add Patient</font></h3>
                   <div class="card-body">
-                    <div id="table" class="table-editable">
-                      <span class="table-add float-right mb-3 mr-2"><a href="" class="btn btn-success btn-rounded font-weight-bold" data-toggle="modal" data-target="#orangeModalSubscription"><i class="fas fa-plus"></i> ADD</a>
-                      </span>
-                      <table class="table table-bordered table-responsive-md table-striped text-center">
-                        <thead>
-                          <tr>
-                            <th class="text-center" color="black">#</th>
-                            <th class="text-center" color="black">Name of Departments</th>
-                            <th class="text-center" color="black">Department Code</th>
-                            <th class="text-center" color="black">Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="pt-3-half"  color="black">1</td>
-                            <td class="pt-3-half"  color="black">Department of Cardiology</td>
-                            <td class="pt-3-half"  color="black">DC01</td>
-                            <td>
-                              <span class="table-remove">
-                                <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
-                              </span>
-                            </td>
-                          </tr>
 
-                          <tr>
-                            <td class="pt-3-half" color="black">2</td>
-                            <td class="pt-3-half" color="black">Department of Intensive Care</td>
-                            <td class="pt-3-half" color="black">DIC01</td>
-                            <td>
-                              <span class="table-remove"><button type="button"
-                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                            </td>
-                          </tr>
 
-                          <tr>
-                            <td class="pt-3-half" color="black">3</td>
-                            <td class="pt-3-half" color="black">Department of Neurology</td>
-                            <td class="pt-3-half" color="black">DN01</td>
-                            <td>
-                              <span class="table-remove"><button type="button"
-                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                            </td>
-                          </tr>
-
-                          <tr class="hide">
-                            <td class="pt-3-half" color="black">4</td>
-                            <td class="pt-3-half" color="black">Department of Conservative</td>
-                            <td class="pt-3-half" color="black">DOC01</td>
-                            <td>
-                              <span class="table-remove"><button type="button"
-                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                            </td>
-                          </tr>
-
-                         <tr class="hide">
-                            <td class="pt-3-half" color="black">5</td>
-                            <td class="pt-3-half" color="black">Department of Diagnosis</td>
-                            <td class="pt-3-half" color="black">DOD01</td>
-                            <td>
-                              <span class="table-remove"><button type="button"
-                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                            </td>
-                          </tr>
-
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Popup -->
-                <!-- ============================================================== -->
-              <section class="contact-section area-padding">
-                <div class="modal fade mt-lg-5" id="orangeModalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog modal-notify modal-warning" role="document">
-                    <!--Content-->
-                    <div class="modal-content">
-                      <!--Header-->
-                      <div class="modal-header text-center bg-info">
-                        <h4 class="modal-title white-text w-100 font-weight-bold py-2">ADD DEPARTMENT</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true" class="white-text">&times;</span>
-                        </button>
-                      </div>
 
                       <!--Body-->
-                      <div class="modal-body">
+
                         <div class="md-form mb-5">
                           <i class="fas fa-hospital prefix grey-text"></i>
                           <input type="text" id="form1" class="form-control validate">
-                          <label data-error="wrong" data-success="right" for="form1">Name of Department</label>
+                          <label data-error="wrong" data-success="right" for="form1">Name of Patient</label>
                         </div>
                           <div class="md-form mb-5">
                           <i class="fas fa-hospital prefix grey-text"></i>
                           <input type="text" id="form2" class="form-control validate">
-                          <label data-error="wrong" data-success="right" for="form2">Department Code</label>
+                          <label data-error="wrong" data-success="right" for="form2">Doctor</label>
                         </div>
-                      </div>
-                      <!--Footer-->
-                      <div class="modal-footer justify-content-center">
-                        <a type="button" class="btn btn-outline-success btn-rounded waves-effect" href="/department/">SAVE <i class="fas fa-plus"></i></a>
-                      </div>
-                    </div>
-                    <!--/.Content-->
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <input type="text" id="form3" class="form-control validate">
+                          <label data-error="wrong" data-success="right" for="form3">Age</label>
+                        </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <input type="text" id="form4" class="form-control validate">
+                          <label data-error="wrong" data-success="right" for="form4">Gender</label>
+                        </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <input type="text" id="form5" class="form-control validate">
+                          <label data-error="wrong" data-success="right" for="form5">Occupation</label>
+                        </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <input type="text" id="form6" class="form-control validate">
+                          <label data-error="wrong" data-success="right" for="form6">Mobile</label>
+                        </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <input type="text" id="form7" class="form-control validate">
+                          <label data-error="wrong" data-success="right" for="form7">Address</label>
+                        </div>
                   </div>
                 </div>
-              </section>
+
+                <div class="container card">
+                  <h3 class="card-header text-left font-weight-bold  py-4"><font color="black">Add Prescription</font></h3>
+                  <div class="card-body">
+
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <input type="text" id="form8" class="form-control validate">
+                          <label data-error="wrong" data-success="right" for="form8">Chief Complain</label>
+                        </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <input type="text" id="form9" class="form-control validate">
+                          <label data-error="wrong" data-success="right" for="form9">Observation</label>
+                        </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <input type="text" id="form10" class="form-control validate">
+                          <label data-error="wrong" data-success="right" for="form10">Advice</label>
+                        </div>
+                         <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <input type="text" id="form11" class="form-control validate">
+                          <label data-error="wrong" data-success="right" for="form11">Medicines</label>
+
+                      <!--Footer-->
+                      <div class="footer justify-content-center">
+                        <a type="button" class="btn btn-outline-success btn-rounded waves-effect" href="/patients/">SAVE <i class="fas fa-plus"></i></a>
+                      </div>
+
+
+
+                  </div>
+                </div>
+
+
+
+
+
             </section>
 
             <!-- ============================================================== -->

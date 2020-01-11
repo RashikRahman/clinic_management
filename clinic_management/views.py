@@ -13,3 +13,15 @@ def login(request):
 
 def services(request):
     return render(request, 'services.html')
+
+def doctors(request):
+    return render(request, 'doctors.html')
+
+def patients(request):
+    return render(request, 'patients.html')
+
+def addpatient(request):
+    return render(request, 'addpatient.html')
+
+def tests(request):
+    return render(request, 'tests.html')

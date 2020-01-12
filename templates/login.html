@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/static/assets/libs/css/mdb.min.css">
     <link rel="stylesheet" href="/static/assets/libs/css/all.css">
 
+
     <title>Clinic Management | Log In</title>
 </head>
 
@@ -65,11 +66,14 @@
                             <div class="page-header">
                                 <form>
                                     <div id="loginid" class="enterlogin">
-                                        <input class="form-control" type="text" placeholder="Enter Username       ">
+                                        <input class="form-control" type="text"  placeholder="Enter Username       ">
                                     </div>
+                                    <p></p>
                                     <div id="loginpass" class="enterpass">
-                                        <input class="form-control" type="text" placeholder="Enter Password       ">
+                                        <input class="form-control" type="password"  placeholder="Enter Password       "><br>
+                                        <input type="checkbox" onclick="myFunction()">Show Password
                                     </div>
+
                                 </form>
                             </div>
 
@@ -98,7 +102,7 @@
                 <div class="container-fluid d-flex justify-content-center">
                     <div class="row">
                         <div class="font-weight-bold text-center">
-                            Copyright © 2020 Concept. All rights reserved. Dashboard by <a href="#"> The A Team<i class="fas fa-user"></i></a>
+                            Copyright © 2020 Concept. All rights reserved. Dashboard by <a href=""> The A Team<i class="fas fa-user"></i></a>
                         </div>
                     </div>
                 </div>
@@ -142,7 +146,18 @@
     <script src="/static/assets/libs/js/mdb.min.js"></script>
     <script src="/static/assets/libs/js/popper.min.js"></script>
     <script src="/static/assets/libs/js/all.js"></script>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("loginpass");
+              if (x.type === "password") {
+                x.type = "text";
+              } else {
+                x.type = "password";
+              }
+            }
+        </script>
         </div>
     </div>
+
 </body>
 </html>

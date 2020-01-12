@@ -127,7 +127,7 @@
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="/home/" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Tests</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Appointments</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -137,18 +137,14 @@
                     <!-- ============================================================== -->
                     <!-- end pageheader  -->
                     <!-- ============================================================== -->
-            <div class="card container-fluid d-flex">
-              <div class="card-body">
-                <font class="font-weight-bold" color="black">Welcome To Test Panel</font>
-              </div>
-            </div>
+
 
             <!-- ============================================================== -->
 
             <section class="contact-section area-padding">
                 <!-- Editable table -->
                 <div class="container card">
-                  <h3 class="card-header text-left font-weight-bold text-uppercase py-4"><font color="black">Tests</font></h3>
+                  <h3 class="card-header text-center font-weight-bold text-uppercase py-4"><font color="black">Doctors</font></h3>
                   <div class="card-body">
                     <div id="table" class="table-editable">
                       <span class="table-add float-right mb-3 mr-2"><a href="" class="btn btn-success btn-rounded font-weight-bold" data-toggle="modal" data-target="#orangeModalSubscription"><i class="fas fa-plus"></i> ADD</a>
@@ -157,34 +153,41 @@
                         <thead>
                           <tr>
                             <th class="text-center" color="black">#</th>
-                            <th class="text-center" color="black">Name of Test</th>
-                            <th class="text-center" color="black">Price</th>
-                            <th class="text-center" color="black">Action</th>
+                            <th class="text-center" color="black">Name of Patient</th>
+                            <th class="text-center" color="black">Patient number</th>
+                              <th class="text-center" color="black">Doctor</th>
+                            <th class="text-center" color="black">Date Time</th>
+                              <th class="text-center" color="black">Action</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td class="pt-3-half"  color="black">1</td>
-                            <td class="pt-3-half"  color="black">test1</td>
-                            <td class="pt-3-half"  color="black">500</td>
+                            <td class="pt-3-half"  color="black">Nafisa Labiba</td>
+                            <td class="pt-3-half"  color="black">017********</td>
+                            <td class="pt-3-half"  color="black">Mariam Rahman</td>
+                            <td class="pt-3-half"  color="black">20-01-2020 16:30</td>
+
                             <td>
                               <span class="table-edit">
                                 <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button>
                               </span>
                                 <p></p>
                               <span class="table-remove">
-                                <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                  <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
                               </span>
                             </td>
                           </tr>
+
+
 
                         </tbody>
                       </table>
                     </div>
                   </div>
                 </div>
-
-
+                <!-- Editable table -->
+                <!-- ============================================================== -->
                 <!-- Popup -->
                 <!-- ============================================================== -->
               <section class="contact-section area-padding">
@@ -195,7 +198,7 @@
                     <div class="modal-content">
                       <!--Header-->
                       <div class="modal-header text-center bg-info">
-                        <h4 class="modal-title white-text w-100 font-weight-bold py-4">ADD TEST</h4>
+                        <h4 class="modal-title white-text w-100 font-weight-bold py-2">ADD APPOINTMENT</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true" class="white-text">&times;</span>
                         </button>
@@ -206,17 +209,28 @@
                         <div class="md-form mb-5">
                           <i class="fas fa-hospital prefix grey-text"></i>
                           <input type="text" id="form1" class="form-control validate">
-                          <label data-error="wrong" data-success="right" for="form1">Name of Test</label>
+                          <label data-error="wrong" data-success="right" for="form1">Name of Patient</label>
                         </div>
                           <div class="md-form mb-5">
                           <i class="fas fa-hospital prefix grey-text"></i>
                           <input type="text" id="form2" class="form-control validate">
-                          <label data-error="wrong" data-success="right" for="form2">Price</label>
+                          <label data-error="wrong" data-success="right" for="form2">Number of Patient</label>
                         </div>
+                          <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <input type="text" id="form3" class="form-control validate">
+                          <label data-error="wrong" data-success="right" for="form3">Doctor</label>
+                        </div>
+                          <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <input type="text" id="form4" class="form-control validate">
+                          <label data-error="wrong" data-success="right" for="form4">Date Time</label>
+                        </div>
+
                       </div>
                       <!--Footer-->
                       <div class="modal-footer justify-content-center">
-                        <a type="button" class="btn btn-outline-success btn-rounded waves-effect" href="/tests/">SAVE <i class="fas fa-plus"></i></a>
+                        <a type="button" class="btn btn-outline-success btn-rounded waves-effect" href="/services/">SAVE <i class="fas fa-plus"></i></a>
                       </div>
                     </div>
                     <!--/.Content-->
@@ -233,7 +247,7 @@
                 <div class="container-fluid d-flex justify-content-center">
                     <div class="row">
                         <div class="font-weight-bold text-center">
-                                Copyright © 2020 Concept. All rights reserved. Dashboard by <a href=""> The A Team<i class="fas fa-user"></i></a>
+                            Copyright © 2020 Concept. All rights reserved. Dashboard by <a href=""> The A Team<i class="fas fa-user"></i></a>
                         </div>
                     </div>
                 </div>
@@ -281,5 +295,4 @@
         </div>
     </div>
 </body>
-
 </html>

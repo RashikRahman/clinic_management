@@ -25,3 +25,6 @@ def addpatient(request):
 
 def tests(request):
     return render(request, 'tests.html')
+
+def appointment(request):
+    return render(request, 'appointment.html')

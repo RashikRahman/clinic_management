@@ -31,15 +31,24 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'bootstrap4',
+    'dashboard_app.apps.DashboardAppConfig',
+    'addpatient_app.apps.AddpatientAppConfig',
+    'addappointment_app.apps.AddappointmentAppConfig',
+    'appointment_app.apps.AppointmentAppConfig',
+    'department_app.apps.DepartmentAppConfig',
+    'doctor_app.apps.DoctorAppConfig',
+    'invoice_app.apps.InvoiceAppConfig',
+    'login_app.apps.LoginAppConfig',
+    'patient_app.apps.PatientAppConfig',
+    'services_app.apps.ServicesAppConfig',
+    'tests_app.apps.TestsAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap4'
-
-
 ]
 
 MIDDLEWARE = [
@@ -57,7 +66,7 @@ ROOT_URLCONF = 'clinic_management.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,9 +130,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'root')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 # -----------------------------------------------------
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+

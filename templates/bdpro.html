@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="/static/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/assets/libs/css/style.css">
+    <link rel="stylesheet" href="/static/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/static/assets/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="/static/assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="/static/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/static/assets/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="/static/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <link rel="stylesheet" href="/static/assets/libs/css/mdb.min.css" >
+    <link rel="stylesheet" href="/static/assets/libs/css/animate-3.7.0.css">
+    <link rel="stylesheet" href="/static/assets/libs/css/owl-carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/libs/css/mdb.min.css">
+    <link rel="stylesheet" href="/static/assets/libs/css/all.css">
+    <title>Clinic Management | Admin</title>
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+
+
+            <section class="contact-section area-padding">
+                <!-- Editable table -->
+                <div class="container card">
+
+                  <div class="card-body" >
+                    <div id="table" class="table-editable">
+                      <table class="table table-bordered table-responsive-md table-striped text-center">
+                        <thead>
+                          <tr>
+                            <th class="text-center" color="black">#</th>
+                            <th class="text-center" color="black">Name </th>
+                            <th class="text-center" color="black">ID</th>
+                              <th class="text-center" color="black">Email</th>
+                            <th class="text-center" color="black">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                         {% for val in student%}
+
+                          <tr>
+                            <td class="pt-3-half"  color="black">{{ val.pk }}</td>
+                            <td class="pt-3-half"  color="black">{{ val.name }}</td>
+                            <td class="pt-3-half"  color="black">{{ val.student_ID }}</td>
+                              <td class="pt-3-half"  color="black">{{ val.email_address }}</td>
+                            <td>
+                              <span class="table-remove">
+                                <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                              </span>
+                            </td>
+                          </tr>
+                        {% endfor %}
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+            </section>
+
+                <div class="row">
+                            <div class="page-header">
+                                <form action="/addstudent/" method="post">
+                                    {% csrf_token %}
+                                        <input class="form-control" type="text" name="NAME" placeholder="Enter NAme"><br>
+
+                                        <input class="form-control" type="number" name="SID" placeholder="Enter SID"><br>
+
+                                        <input class="form-control" type="text" name="EMAIL" placeholder="Enter mail"><br>
+
+                                        <input class="form-control" type="submit"  value="Submit"><br>
+
+
+                                </form>
+                            </div>
+
+                        </div>
+
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+
+            <!-- ============================================================== -->
+            <!-- end footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- end wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- end main wrapper  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
+    <script src="/static/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
+    <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <script src="/static/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
+    <script src="/static/assets/libs/js/main-js.js"></script>
+    <!-- chart chartist js -->
+    <script src="/static/assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <!-- sparkline js -->
+    <script src="/static/assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <!-- morris js -->
+    <script src="/static/assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="/static/assets/vendor/charts/morris-bundle/morris.js"></script>
+    <!-- chart c3 js -->
+    <script src="/static/assets/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="/static/assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="/static/assets/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="/static/assets/libs/js/dashboard-ecommerce.js"></script>
+    <script type="text/javascript" src="/static/assets/libs/js/mdb.min.js"></script>
+    <script src="/static/assets/libs/js/vendor/wow.min.js"></script>
+    <script src="/static/assets/libs/js/vendor/owl-carousel.min.js"></script>
+    <script src="/static/assets/libs/js/main.js"></script>
+    <script src="/static/assets/libs/js/mdb.min.js"></script>
+    <script src="/static/assets/libs/js/popper.min.js"></script>
+    <script src="/static/assets/libs/js/all.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+

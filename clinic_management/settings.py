@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'bootstrap4',
+    'PRO_app.apps.ProAppConfig',
     'dashboard_app.apps.DashboardAppConfig',
     'addpatient_app.apps.AddpatientAppConfig',
     'addappointment_app.apps.AddappointmentAppConfig',
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
 ]
 
 MIDDLEWARE = [

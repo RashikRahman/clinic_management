@@ -54,18 +54,17 @@
                         </thead>
                         <tbody>
                          {% for val in student%}
-
-                          <tr>
-                            <td class="pt-3-half"  color="black">{{ val.pk }}</td>
-                            <td class="pt-3-half"  color="black">{{ val.name }}</td>
-                            <td class="pt-3-half"  color="black">{{ val.student_ID }}</td>
-                              <td class="pt-3-half"  color="black">{{ val.email_address }}</td>
-                            <td>
-                              <span class="table-remove">
-                                <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
-                              </span>
-                            </td>
-                          </tr>
+                             <tr>
+                                <td class="pt-3-half"  color="black">{{ val.pk }}</td>
+                                <td class="pt-3-half"  color="black">{{ val.name }}</td>
+                                <td class="pt-3-half"  color="black">{{ val.student_ID }}</td>
+                                  <td class="pt-3-half"  color="black">{{ val.email_address }}</td>
+                                <td>
+                                  <span class="table-remove">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                  </span>
+                                </td>
+                              </tr>
                         {% endfor %}
 
                         </tbody>

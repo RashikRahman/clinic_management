@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from .models import Department
 
 # Department View
 def department(request):
-    return render(request, 'department.html')
+    d = Department.objects.all()
+    context = {'department': d}
+    return render(request, 'department.html',context)

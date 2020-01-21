@@ -162,24 +162,24 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td class="pt-3-half"  color="black">1</td>
-                            <td class="pt-3-half"  color="black">Mariam Rahman</td>
-                            <td class="pt-3-half"  color="black">Diagnosis</td>
-                            <td class="pt-3-half"  color="black">017********</td>
-                            <td class="pt-3-half"  color="black">abc@something.com</td>
-                              <td class="pt-3-half"  color="black">very good doctor</td>
-
-                            <td>
-                              <span class="table-edit">
+                          {% for val in doctor%}
+                             <tr>
+                                <td class="pt-3-half"  color="black">{{ val.pk }}</td>
+                                <td class="pt-3-half"  color="black">{{ val.name }}</td>
+                                 <td class="pt-3-half"  color="black">{{ val.department }}</td>
+                                 <td class="pt-3-half"  color="black">{{ val.phone }}</td>
+                                 <td class="pt-3-half"  color="black">{{ val.email }}</td>
+                                 <td class="pt-3-half"  color="black">{{ val.description }}</td>
+                                <td>
+                                    <span class="table-edit">
                                 <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button>
-                              </span>
-                                <p></p>
-                              <span class="table-remove">
-                                  <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
-                              </span>
-                            </td>
-                          </tr>
+                              </span><p></p>
+                                  <span class="table-remove">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                  </span>
+                                </td>
+                              </tr>
+                           {% endfor %}
 
 
 

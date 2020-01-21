@@ -161,53 +161,23 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td class="pt-3-half"  color="black">1</td>
-                            <td class="pt-3-half"  color="black">Consultation Fee's</td>
-                            <td class="pt-3-half"  color="black">Diagnosis</td>
-                            <td class="pt-3-half"  color="black">500</td>
-                            <td class="pt-3-half"  color="black">1</td>
-                            <td>
-                              <span class="table-edit">
+                          {% for val in service%}
+                             <tr>
+                                <td class="pt-3-half"  color="black">{{ val.pk }}</td>
+                                <td class="pt-3-half"  color="black">{{ val.name }}</td>
+                                 <td class="pt-3-half"  color="black">{{ val.department }}</td>
+                                 <td class="pt-3-half"  color="black">{{ val.cost }}</td>
+                                 <td class="pt-3-half"  color="black">{{ val.duration }}</td>
+                                <td>
+                                    <span class="table-edit">
                                 <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button>
-                              </span>
-                              <span class="table-remove">
-                                  <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
-                              </span>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td class="pt-3-half"  color="black">2</td>
-                            <td class="pt-3-half"  color="black">Light Cure</td>
-                            <td class="pt-3-half"  color="black">Conservative</td>
-                            <td class="pt-3-half"  color="black">2000</td>
-                            <td class="pt-3-half"  color="black">1</td>
-                            <td>
-                              <span class="table-edit">
-                                <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button>
-                              </span>
-                              <span class="table-remove">
-                                  <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
-                              </span>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td class="pt-3-half"  color="black">3</td>
-                            <td class="pt-3-half"  color="black">Root Canal Therapy</td>
-                            <td class="pt-3-half"  color="black">Conservative</td>
-                            <td class="pt-3-half"  color="black">6000</td>
-                            <td class="pt-3-half"  color="black">3</td>
-                            <td>
-                             <span class="table-edit">
-                                <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button>
-                              </span>
-                              <span class="table-remove">
-                                  <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
-                              </span>
-                            </td>
-                          </tr>
+                              </span><p></p>
+                                  <span class="table-remove">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                  </span>
+                                </td>
+                              </tr>
+                           {% endfor %}
 
 
                         </tbody>

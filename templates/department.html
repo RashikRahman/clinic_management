@@ -154,61 +154,21 @@
                           <tr>
                             <th class="text-center" color="black">#</th>
                             <th class="text-center" color="black">Name of Departments</th>
-                            <th class="text-center" color="black">Department Code</th>
                             <th class="text-center" color="black">Action</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td class="pt-3-half"  color="black">1</td>
-                            <td class="pt-3-half"  color="black">Department of Cardiology</td>
-                            <td class="pt-3-half"  color="black">DC01</td>
-                            <td>
-                              <span class="table-remove">
-                                <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
-                              </span>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td class="pt-3-half" color="black">2</td>
-                            <td class="pt-3-half" color="black">Department of Intensive Care</td>
-                            <td class="pt-3-half" color="black">DIC01</td>
-                            <td>
-                              <span class="table-remove"><button type="button"
-                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td class="pt-3-half" color="black">3</td>
-                            <td class="pt-3-half" color="black">Department of Neurology</td>
-                            <td class="pt-3-half" color="black">DN01</td>
-                            <td>
-                              <span class="table-remove"><button type="button"
-                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                            </td>
-                          </tr>
-
-                          <tr class="hide">
-                            <td class="pt-3-half" color="black">4</td>
-                            <td class="pt-3-half" color="black">Department of Conservative</td>
-                            <td class="pt-3-half" color="black">DOC01</td>
-                            <td>
-                              <span class="table-remove"><button type="button"
-                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                            </td>
-                          </tr>
-
-                         <tr class="hide">
-                            <td class="pt-3-half" color="black">5</td>
-                            <td class="pt-3-half" color="black">Department of Diagnosis</td>
-                            <td class="pt-3-half" color="black">DOD01</td>
-                            <td>
-                              <span class="table-remove"><button type="button"
-                                  class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
-                            </td>
-                          </tr>
+                           {% for val in department%}
+                             <tr>
+                                <td class="pt-3-half"  color="black">{{ val.pk }}</td>
+                                <td class="pt-3-half"  color="black">{{ val.name }}</td>
+                                <td>
+                                  <span class="table-remove">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                  </span>
+                                </td>
+                              </tr>
+                           {% endfor %}
 
                         </tbody>
                       </table>

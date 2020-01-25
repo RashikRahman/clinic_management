@@ -77,7 +77,7 @@
 
                 <div class="row">
                             <div class="page-header">
-                                <form action="/addstudent/" method="post">
+                                <form action="{% url 'addd'%}" method="post">
                                     {% csrf_token %}
                                         <input class="form-control" type="text" name="NAME" placeholder="Enter NAme"><br>
 

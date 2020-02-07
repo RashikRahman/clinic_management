@@ -36,8 +36,6 @@ INSTALLED_APPS = [
 
     'dashboard_app.apps.DashboardAppConfig',
     'addpatient_app.apps.AddpatientAppConfig',
-    'addappointment_app.apps.AddappointmentAppConfig',
-    'appointment_app.apps.AppointmentAppConfig',
     'department_app.apps.DepartmentAppConfig',
     'doctor_app.apps.DoctorAppConfig',
     'invoice_app.apps.InvoiceAppConfig',

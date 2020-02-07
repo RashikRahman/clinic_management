@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/static/assets/libs/css/owl-carousel.min.css">
     <link rel="stylesheet" href="/static/assets/libs/css/mdb.min.css">
     <link rel="stylesheet" href="/static/assets/libs/css/all.css">
-    <title>Clinic Management | Admin</title>
+    <title>Ashraf Dental Hospital | Admin</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="{% url 'home' %}"><font class="font-weight-bold" color="black" style="font-family: 'Poor Richard',serif">Clinic Management <i class="fa fa-hospital-alt"></i></font></a>
+                <a class="navbar-brand" href="{% url 'home' %}"><font class="font-weight-bold" color="black" style="font-family: 'Poor Richard',serif">Ashraf Dental Hospital <i class="fa fa-hospital-alt"></i></font></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -44,6 +44,8 @@
                                 <input class="form-control" type="text" placeholder="Search..">
                             </div>
                         </li>
+                        <form action="{% url 'logout'%}" method="post">
+                            {% csrf_token %}
                         <li class="nav-item dropdown nav-user">
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/static/assets/images/admin.jpg" alt="" class="user-avatar-md rounded-circle"><i class="fas fa-arrow-alt-circle-down ml-2" style="color: black"></i></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
@@ -51,9 +53,9 @@
                                     <h5 class="mb-1 text-white nav-user-name"><font class="font-weight-bold" color="black">Rashik Rahman</font></h5>
                                     <span class="status"></span><span class="ml-1 mb-2"><i class="font-italic">Admin</i></span>
                                 </div>
-                                <a type="button" class="dropdown-item btn-rounded btn aqua-gradient mt-2" href="{% url 'login' %}"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                    <input type="submit" class="dropdown-item btn-rounded btn aqua-gradient mt-2" value="Log Out">
                             </div>
-                        </li>
+                        </form>
                     </ul>
                 </div>
             </nav>
@@ -96,9 +98,6 @@
                                 <a class="nav-link" href="{% url 'tests' %}" ><i class="fas fa-user"></i>Tests</a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'appointment' %}"><i class="fas fa-fw fa-calendar-times"></i>Appointment</a>
-                            </li>
 
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'invoice' %}" ><i class="fas fa-money-bill-alt"></i>Invoice</a>

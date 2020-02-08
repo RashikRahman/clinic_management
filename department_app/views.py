@@ -17,8 +17,7 @@ def AddDept(request):
 
     if request.method == 'POST':
         n = request.POST.get('dname')
-
-        d_obj = Department( name=n)
+        d_obj = Department(name=n)
         d_obj.save()
         return redirect('/department/')
     else:

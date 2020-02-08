@@ -47,7 +47,7 @@
                         <form action="{% url 'logout'%}" method="post">
                             {% csrf_token %}
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/static/assets/images/admin.jpg" alt="" class="user-avatar-md rounded-circle"><i class="fas fa-arrow-alt-circle-down ml-2" style="color: black"></i></a>
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/static/assets/images/admin1.jpg" alt="" class="user-avatar-md rounded-circle"><i class="fas fa-arrow-alt-circle-down ml-2" style="color: black"></i></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info aqua-gradient rounded">
                                     <h5 class="mb-1 text-white nav-user-name"><font class="font-weight-bold" color="black">Rashik Rahman</font></h5>
@@ -158,7 +158,7 @@
                               <th class="text-center" color="black">Gender</th>
                               <th class="text-center" color="black">Mobile</th>
                               <th class="text-center" color="black">Address</th>
-                              <th class="text-center" color="black">Visited</th>
+                              <th class="text-center" color="black">Diabetes</th>
                               <th class="text-center" color="black">Action</th>
                           </tr>
                         </thead>
@@ -172,7 +172,12 @@
                                  <td class="pt-3-half"  color="black">{{ val.gender }}</td>
                                  <td class="pt-3-half"  color="black">{{ val.phone }}</td>
                                  <td class="pt-3-half"  color="black">{{ val.address }}</td>
-                                 <td class="pt-3-half"  color="black">{{ val.is_visited }}</td>
+                                  {% if val.diabetes == False %}
+                              <td class="pt-3-half"  color="black">No</td>
+                              {% endif %}
+                           {% if val.diabetes == True %}
+                              <td class="pt-3-half"  color="black">Yes</td>
+                              {% endif %}
                                 <td>
                                     <span class="table-edit">
                                 <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button>

@@ -19,6 +19,6 @@ def AddTest(request):
 
         d_obj = Test(name=n,price=p)
         d_obj.save()
-        return redirect('/test/')
+        return redirect('/tests/')
     else:
-        return redirect('/test/')
+        return redirect('/tests/')

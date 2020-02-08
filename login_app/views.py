@@ -17,7 +17,8 @@ def logins(request):
             return redirect('/dashboard/')
 
     else:
-        return render(request, 'login.html')
+        return redirect('/dashboard/')
+
 
 
 def lougts(request):

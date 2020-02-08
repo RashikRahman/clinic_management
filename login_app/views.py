@@ -4,7 +4,8 @@ from django.contrib.auth import login,logout
 
 
 # Login View.
-
+def show(request):
+    return render(request,'login.html')
 
 def logins(request):
 

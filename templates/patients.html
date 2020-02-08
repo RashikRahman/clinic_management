@@ -155,6 +155,7 @@
                             <th class="text-center" color="black">Name of Patient</th>
                             <th class="text-center" color="black">Doctor</th>
                             <th class="text-center" color="black">Age</th>
+                              <th class="text-center" color="black">Date</th>
                               <th class="text-center" color="black">Gender</th>
                               <th class="text-center" color="black">Mobile</th>
                               <th class="text-center" color="black">Address</th>
@@ -163,12 +164,13 @@
                           </tr>
                         </thead>
                         <tbody>
-                          {% for val in patient%}
+                          {% for val, s in patient%}
                              <tr>
-                                <td class="pt-3-half"  color="black">{{ val.pk }}</td>
+                                <td class="pt-3-half"  color="black">{{ s }}</td>
                                 <td class="pt-3-half"  color="black">{{ val.name }}</td>
                                  <td class="pt-3-half"  color="black">{{ val.doctor }}</td>
                                  <td class="pt-3-half"  color="black">{{ val.age }}</td>
+                                 <td class="pt-3-half"  color="black">{{ val.date }}</td>
                                  <td class="pt-3-half"  color="black">{{ val.gender }}</td>
                                  <td class="pt-3-half"  color="black">{{ val.phone }}</td>
                                  <td class="pt-3-half"  color="black">{{ val.address }}</td>
@@ -180,10 +182,13 @@
                               {% endif %}
                                 <td>
                                     <span class="table-edit">
-                                <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button>
+                                <a href="{% url 'edit-patient' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button></a>
+                              </span><p></p>
+                                    <span class="table-edit">
+                                <a href="{% url 'prescribe' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Prescribe</button></a>
                               </span><p></p>
                                   <span class="table-remove">
-                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                     <a href="{% url 'remove-patient' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></a>
                                   </span>
                                 </td>
                               </tr>

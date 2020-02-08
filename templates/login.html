@@ -62,19 +62,23 @@
                     <div class="row">
 
                             <div class="page-header">
-                                <form action="{% url 'login'%}" method="post">
+                                <form  action="{% url 'login'%}" method="post">
                                     {% csrf_token %}
-                                    <div id="loginid" class="enterlogin">
+                                    <div class="form-group">
 
-                                            <input class="form-control" type="text" name="uname" placeholder="Enter Username       ">
+                                        <input type="text" class="form-control" id="email" name="username"
+                                               aria-describedby="emailHelp" placeholder="Enter user name" required>
                                     </div>
-                                    <p></p>
-                                    <div id="loginpass" class="enterpass">
-                                        <input class="form-control" type="password" name="upass" placeholder="Enter Password       "><br>
-                                        <input type="checkbox" onclick="myFunction()">Show Password
+                                    <div class="form-group">
 
+                                        <input type="password" class="form-control" id="password" name="password"
+                                               placeholder="Enter Password" required>
                                     </div>
-                                            <input type="submit" class="sign-in btn-rounded btn aqua-gradient mt-2" value="Sign In">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1" onclick="myFunction()" id="show-pass">Show Password</label>
+                                    </div>
+                                    <button type="submit" class="sign-in btn-rounded btn aqua-gradient mt-2" >Sign In</button>
                                 </form>
                             </div>
 
@@ -145,12 +149,12 @@
     <script src="/static/assets/libs/js/all.js"></script>
         <script>
             function myFunction() {
-              var x = document.getElementById("loginpass");
-              if (x.type === "password") {
-                x.type = "text";
-              } else {
-                x.type = "password";
-              }
+                var x = document.getElementById("password");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
             }
         </script>
         </div>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Invoice</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container">
+    <h2 class="my-5 text-center">Edit Invoice</h2>
+    <form action="{% url 'edit-invoice' invc.id %}" method="post">
+    {% csrf_token %}
+        <div class="md-form mb-5">
+                <i class="fas fa-hospital prefix grey-text"></i>
+                <label data-error="wrong" data-success="right" for="form1">Name of Patient</label>
+                <input type="text" id="form1" name="pname" class="form-control validate" value="{{ invc.PatientName }}">
+            </div>
+            <div class="md-form mb-5">
+                <i class="fas fa-hospital prefix grey-text"></i>
+                <label data-error="wrong" data-success="right" for="form2">Service    </label>
+                <input type="text" id="form2" name="servc" class="form-control validate" value="{{ invc.ServiceName }}">
+            </div>
+            <div class="md-form mb-5">
+                <i class="fas fa-hospital prefix grey-text"></i>
+                <label data-error="wrong" data-success="right" for="form2">Sub Total</label>
+                <input type="text" id="form2" name="sttl" class="form-control validate" value="{{ invc.Sub_Total }}">
+            </div>
+            <div class="md-form mb-5">
+                <i class="fas fa-hospital prefix grey-text"></i>
+                <label data-error="wrong" data-success="right" for="form3">Discount</label>
+                <input type="text" id="form3" name="dis" class="form-control validate" value="{{ invc.Discount }}">
+            </div>
+            <div class="md-form mb-5">
+                <i class="fas fa-hospital prefix grey-text"></i>
+                <label data-error="wrong" data-success="right" for="form4">Total Amount</label>
+                <input type="text" id="form4" name="ttlamnt" class="form-control validate" value="{{ invc.Total_Amount }}">
+            </div>
+            <div class="md-form mb-5">
+                <i class="fas fa-hospital prefix grey-text"></i>
+                <label data-error="wrong" data-success="right" for="form5">Total Paid</label>
+                <input type="text" id="form5" name="ttlpaid" class="form-control validate" value="{{ invc.Total_Paid }}">
+            </div>
+            <div class="md-form mb-5">
+                <i class="fas fa-hospital prefix grey-text"></i>
+                <label data-error="wrong" data-success="right" for="form5">Total Due</label>
+                <input type="text" id="form5" name="ttldue" class="form-control validate" value="{{ invc.Total_Due }}">
+            </div>
+            <div class="md-form mb-5">
+                <i class="fas fa-hospital prefix grey-text"></i>
+                <label data-error="wrong" data-success="right" for="form6">Due</label>
+                <input type="text" id="form6" name="due" class="form-control validate" value="{{ invc.Due_Status }}">
+
+                <div class="modal-footer justify-content-center">
+                    <input type="submit" class="btn btn-outline-success btn-rounded waves-effect" value="SAVE" >
+                </div>
+            </div>
+</form>
+</div>
+
+</body>
+</html>

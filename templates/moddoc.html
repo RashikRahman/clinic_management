@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Doctor</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container">
+    <h2 class="my-5 text-center">Edit Doctors</h2>
+    <form action="{% url 'edit-doc' doctors.id %}" method="post">
+    {% csrf_token %}
+    <div class="modal-body">
+        <div class="md-form mb-5">
+          <i class="fas fa-hospital prefix grey-text"></i>
+          <label data-error="wrong" data-success="right" for="form1">Name of Doctor</label>
+            <input type="text" id="form1" name="dname" class="form-control validate" value="{{ doctors.name }}">
+        </div>
+          <div class="md-form mb-5">
+          <i class="fas fa-hospital prefix grey-text"></i>
+          <label data-error="wrong" data-success="right" for="form2">Name of Department</label>
+              <input type="text" id="form1" name="ddep" class="form-control validate" value="{{ doctors.department }}">
+        </div>
+          <div class="md-form mb-5">
+          <i class="fas fa-hospital prefix grey-text"></i>
+          <label data-error="wrong" data-success="right" for="form3">Mobile Number</label>
+              <input type="text" id="form1" name="dmob" class="form-control validate" value="{{ doctors.phone }}">
+        </div>
+          <div class="md-form mb-5">
+          <i class="fas fa-hospital prefix grey-text"></i>
+          <label data-error="wrong" data-success="right" for="form4">Email</label>
+              <input type="text" id="form1" name="demail" class="form-control validate" value="{{ doctors.email }}">
+        </div>
+          <div class="md-form mb-5">
+          <i class="fas fa-hospital prefix grey-text"></i>
+          <label data-error="wrong" data-success="right" for="form5">Desription</label>
+              <input type="text" id="form1" name="ddes" class="form-control validate" value="{{ doctors.description }}">
+        </div>
+      </div>
+         <div class="modal-footer justify-content-center">
+        <input type="submit" class="btn btn-outline-success btn-rounded waves-effect" value="SAVE">
+      </div>
+</form>
+</div>
+
+</body>
+</html>

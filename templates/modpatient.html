@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Patient</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="container">
+    <h2 class="my-5 text-center">Edit Patient</h2>
+
+<form action="{% url 'edit-patient' patient.id %} " method="post">
+                                            {% csrf_token %}
+                <div class="container card">
+                  <h3 class="card-header text-left font-weight-bold  py-4"><font color="black">Edit Patient</font></h3>
+                  <div class="card-body">
+
+                      <!--Body-->
+
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                            <label data-error="wrong" data-success="right" for="form1">Name of Patient</label>
+                            <input type="text" id="form1" name="pname" class="form-control validate" value="{{ patient.name }}">
+
+                        </div>
+
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                            <label data-error="wrong" data-success="right" for="form3">Age</label>
+                            <input type="text" id="form3" name="page" class="form-control validate" value="{{ patient.age }}">
+                        </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <label data-error="wrong" data-success="right" for="form4">Gender</label>
+                          <input type="text" id="form4"  name="pgender" class="form-control validate" VALUE="{{patient.gender }}">
+                        </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <label data-error="wrong" data-success="right" for="form5">Mobile</label>
+                            <input type="text" id="form5" name="pmob" class="form-control validate" value="{{ patient.phone }}">
+                        </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                            <label data-error="wrong" data-success="right" for="form6">Address</label>
+                            <input type="text" id="form6" name="paddress" class="form-control validate" value="{{ patient.address }}">
+                        </div>
+
+                  </div>
+                </div>
+
+                <div class="container card">
+                  <h3 class="card-header text-left font-weight-bold  py-4"><font color="black">Edit Prescription</font></h3>
+                  <div class="card-body">
+
+                      <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <label data-error="wrong" data-success="right" for="form9">Doctor</label>
+                          <input type="text" id="form9" name="pdoc" class="form-control validate" value="{{ patient.doctor }}">
+
+                        </div>
+
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <label data-error="wrong" data-success="right" for="form9">Chief Complain</label>
+                          <input type="text" id="form9" name="pcomp" class="form-control validate" value="{{ patient.complain }}">
+
+                        </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <label data-error="wrong" data-success="right" for="form10">Observation</label>
+                            <input type="text" id="form10" name="pobs" class="form-control validate" value="{{ patient.observation }}">
+                        </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <label data-error="wrong" data-success="right" for="form11">Advice</label>
+                            <input type="text" id="form11" name="padvc" class="form-control validate" value="{{ patient.advice }}">
+                        </div>
+                         <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <label data-error="wrong" data-success="right" for="form12">Medicines</label>
+                             <input type="text" id="form12" name="pmed" class="form-control validate" value="{{ patient.MedNAme }}">
+                         </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <label data-error="wrong" data-success="right" for="form15">dose</label>
+                            <input type="text" id="form15" name="pdose" class="form-control validate" value="{{ patient.dose }}">
+                        </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <label data-error="wrong" data-success="right" for="form15">duration</label>
+                            <input type="text" id="form15" name="pdur" class="form-control validate" value="{{ patient.duration }}">
+                        </div>
+                        <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <label data-error="wrong" data-success="right" for="form16">Diabetes</label>
+                            <input type="text" id="form16" name="pdia" class="form-control validate" value="{{ patient.diabetes }}">
+                        </div>
+                         <div class="md-form mb-5">
+                          <i class="fas fa-hospital prefix grey-text"></i>
+                          <label data-error="wrong" data-success="right" for="form15">Blood Group</label>
+                             <input type="text" id="form15" name="pblood" class="form-control validate" value="{{ patient.blood_group }}">
+                        </div>
+
+                      <div class="footer justify-content-center">
+                        <input type="submit" class="btn btn-outline-success btn-rounded waves-effect" value="SAVE">
+                      </div>
+
+
+                      <!--Footer-->
+
+
+
+
+                </div>
+
+            </div>
+             </form>
+</div>
+
+</body>
+</html>

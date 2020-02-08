@@ -161,9 +161,9 @@
                           </tr>
                         </thead>
                         <tbody>
-                          {% for val in doctor%}
+                          {% for val, s in doctor%}
                              <tr>
-                                <td class="pt-3-half"  color="black">{{ val.pk }}</td>
+                                <td class="pt-3-half"  color="black">{{ s }}</td>
                                 <td class="pt-3-half"  color="black">{{ val.name }}</td>
                                  <td class="pt-3-half"  color="black">{{ val.department }}</td>
                                  <td class="pt-3-half"  color="black">{{ val.phone }}</td>
@@ -171,10 +171,10 @@
                                  <td class="pt-3-half"  color="black">{{ val.description }}</td>
                                 <td>
                                     <span class="table-edit">
-                                <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button>
+                                <a href="{% url 'edit-doc' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0" >Edit</button></a>
                               </span><p></p>
                                   <span class="table-remove">
-                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                    <a href="{% url 'remove-doc' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></a>
                                   </span>
                                 </td>
                               </tr>

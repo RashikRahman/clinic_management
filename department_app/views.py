@@ -7,9 +7,12 @@ from django.contrib.auth.decorators import login_required
 
 @login_required(login_url="/")
 def department(request):
-
     d = Department.objects.all()
-    context = {'department': d}
+    serial = list()
+    for i in range(1, len(d)+1):
+        serial.append(i)
+    foo = zip(d, serial)
+    context = {'department': foo}
     return render(request, 'department.html',context)
 
 
@@ -22,3 +25,10 @@ def AddDept(request):
         return redirect('/department/')
     else:
         return redirect('/department/')
+
+
+def removedepartment(request,id):
+    Department.objects.filter(id=id).delete()
+    return redirect('/department/')
+
+

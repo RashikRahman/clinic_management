@@ -158,17 +158,17 @@
                           </tr>
                         </thead>
                         <tbody>
-                          {% for val in test%}
+                          {% for val, s in test%}
                              <tr>
-                                <td class="pt-3-half"  color="black">{{ val.pk }}</td>
+                                <td class="pt-3-half"  color="black">{{ s }}</td>
                                 <td class="pt-3-half"  color="black">{{ val.name }}</td>
                                  <td class="pt-3-half"  color="black">{{ val.price }}</td>
                                 <td>
                                     <span class="table-edit">
-                                <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button>
+                                <a href="{% url 'edit-test' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button></a>
                               </span><p></p>
                                   <span class="table-remove">
-                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                    <a href="{% url 'remove-test' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></a>
                                   </span>
                                 </td>
                               </tr>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prescription</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<hr>
+    <div class="container">
+        <div class="jumbotron-fluid text-center">
+            <h4 class="mt-3">Ashraf Dental Hospital</h4>
+            <p><strong>ashrafdental@gmail.com</strong></p>
+            <p><strong>0171123456</strong></p>
+        </div>
+        <hr>
+        <div class="jumbotron-fluid text-right">
+            <p class="mt-3">{{ patient.date }}  </p>
+        </div>
+        <p><strong>Patient Name: </strong> {{ patient.name }}</p>
+        <p><strong>Consulting Doctor: </strong> {{ patient.doctor }}</p>
+        <p><strong>Cheif Complain: </strong> {{ patient.complain }}</p>
+        <p><strong>Doctor Observation: </strong> {{ patient.observation }}</p>
+        <p><strong>Advice: </strong> {{ patient.advice }}</p>
+        <p><strong>Medicine: </strong> {{ patient.MedNAme }}</p>
+        <p><strong>Medicine Dose: </strong> {{ patient.dose }}</p>
+        <p><strong>Medicine Duration: </strong> {{ patient.duration }}</p>
+        <a class="btn btn-outline-primary" id="print-btn" onclick="myFunc();"> Print </a>
+        <a type="button" href="{% url 'patients' %}" class="btn-rounded btn aqua-gradient mt-2" id="back-btn" value="Log Out">Back to Patients</a>
+    </div>
+</body>
+</html>
+
+<script>
+    function myFunc() {
+        var a = document.getElementById('print-btn');
+        var b = document.getElementById('back-btn');
+        a.hidden = true;
+        b.hidden = true;
+        window.print();
+    }
+</script>

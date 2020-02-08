@@ -150,7 +150,7 @@
                     <div id="table" class="table-editable">
                       <span class="table-add float-right mb-3 mr-2"><a href="" class="btn btn-success btn-rounded font-weight-bold" data-toggle="modal" data-target="#orangeModalSubscription"><i class="fas fa-plus"></i> ADD</a>
                       </span>
-                      <table class="table table-bordered table-responsive-md table-striped text-center">
+                      <table class="table table-bordered table-responsive-md table-striped text-center auto-index">
                         <thead>
                           <tr>
                             <th class="text-center" color="black">#</th>
@@ -159,13 +159,13 @@
                           </tr>
                         </thead>
                         <tbody>
-                           {% for val in department%}
+                           {% for val, s in department %}
                              <tr>
-                                <td class="pt-3-half"  color="black">{{ val.pk }}</td>
+                                <td class="pt-3-half"  color="black">{{ s }}</td>
                                 <td class="pt-3-half"  color="black">{{ val.name }}</td>
                                 <td>
                                   <span class="table-remove">
-                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                     <a href="{% url 'remove-department' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></a>
                                   </span>
                                 </td>
                               </tr>

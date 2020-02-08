@@ -152,6 +152,7 @@
                             <th class="text-center" color="black">#</th>
                             <th class="text-center" color="black">Name of Patient</th>
                             <th class="text-center" color="black">Date</th>
+                              <th class="text-center" color="black">Service</th>
                               <th class="text-center" color="black">Subtotal</th>
                               <th class="text-center" color="black">Discount</th>
                               <th class="text-center" color="black">Total Amount</th>
@@ -162,11 +163,12 @@
                           </tr>
                         </thead>
                         <tbody>
-                        {% for val in invc %}
+                        {% for val, s in invc %}
                           <tr>
-                            <td class="pt-3-half"  color="black">{{val.pk}}</td>
+                            <td class="pt-3-half"  color="black">{{s}}</td>
                             <td class="pt-3-half"  color="black">{{val.PatientName}}</td>
                             <td class="pt-3-half"  color="black">{{val.date}}</td>
+                          <td class="pt-3-half"  color="black">{{val.ServiceName}}</td>
                               <td class="pt-3-half"  color="black">{{val.Sub_Total}}</td>
                               <td class="pt-3-half"  color="black">{{val.Discount}}</td>
                               <td class="pt-3-half"  color="black">{{val.Total_Amount}}</td>
@@ -180,10 +182,10 @@
                               {% endif %}
                             <td>
                                 <span class="table-edit">
-                                <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button>
+                                <a href="{% url 'edit-invoice' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button></a>
                               </span><p></p>
                               <span class="table-remove">
-                                <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                <a href="{% url 'remove-invoice' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></a>
                               </span>
                             </td>
                           </tr>
@@ -214,8 +216,9 @@
                       </div>
 
                       <!--Body-->
-                        {% csrf_token %}
-                        <form class="modal-body">
+
+                        <form class="modal-body" action="{% url 'AddInvc' %}" method="post">
+                            {% csrf_token %}
                             <div class="md-form mb-5">
                                 <i class="fas fa-hospital prefix grey-text"></i>
                                 <input type="text" id="form1" name="pname" class="form-control validate">
@@ -266,6 +269,7 @@
 
                     <!--/.Content-->
                   </div>
+                </div>
                 </div>
               </section>
             </section>

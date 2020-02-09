@@ -66,3 +66,12 @@ def edit_invoice(request,id):
         invoice.save()
         return redirect('/invoice/')
     return render(request, 'modinvoice.html', {'invc': invoice})
+
+
+def print_invoice(request,id):
+    invc = Invoice.objects.get(id=id)
+
+    context = {
+        'invoice': invc
+    }
+    return render(request, 'print invoice.html', context)

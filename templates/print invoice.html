@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prescription</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<hr>
+    <div class="container">
+        <div class="jumbotron-fluid text-center">
+            <h4 class="mt-3">Ashraf Dental Hospital</h4>
+            <p><strong>ashrafdental@gmail.com</strong></p>
+            <p><strong>0171123456</strong></p>
+        </div>
+        <hr>
+        <div class="jumbotron-fluid text-right">
+            <p class="mt-3">{{ invc.date }}  </p>
+        </div>
+        <p><strong>Patient Name: </strong> {{ invoice.PatientName }}</p>
+        <p><strong>Service: </strong> {{ invoice.ServiceName }}</p>
+        <p><strong>Sub Total: </strong> {{ invoice.Sub_Total }}</p>
+        <p><strong>Discount: </strong> {{ invoice.Discount }}</p>
+        <p><strong>Total Amount: </strong> {{ invoice.Total_Amount }}</p>
+        <p><strong>Total Paid: </strong> {{ invoice.Total_Paid }}</p>
+        <p><strong>Total Due: </strong> {{ invoice.Total_Due }}</p>
+            {% if invoice.Due_Status == False %}
+                <p><strong>Status: </strong>Paid</p>
+              {% endif %}
+           {% if invoice.Due_Status == True %}
+              <p><strong>Status: </strong>Unpaid</p>
+              {% endif %}
+            <td>
+
+        <a class="btn btn-outline-primary" id="print-btn" onclick="myFunc();"> Print </a>
+        <a type="button" href="{% url 'invoice' %}" class="btn-rounded btn aqua-gradient mt-2" id="back-btn" >Back to Invoices</a>
+    </div>
+</body>
+</html>
+
+<script>
+    function myFunc() {
+        var a = document.getElementById('print-btn');
+        var b = document.getElementById('back-btn');
+        a.hidden = true;
+        b.hidden = true;
+        window.print();
+    }
+</script>

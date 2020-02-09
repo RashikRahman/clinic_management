@@ -186,7 +186,10 @@
                               </span><p></p>
                               <span class="table-remove">
                                 <a href="{% url 'remove-invoice' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></a>
-                              </span>
+                              </span><p></p>
+                                 <span class="table-edit">
+                                <a href="{% url 'print_invoice' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Print Invoice</button></a>
+                              </span><p></p>
                             </td>
                           </tr>
                         {% endfor %}

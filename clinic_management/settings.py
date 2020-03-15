@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'bootstrap4',
     'PRO_app.apps.ProAppConfig',
-
+    'appointment_app.apps.AppointmentAppConfig',
     'dashboard_app.apps.DashboardAppConfig',
     'addpatient_app.apps.AddpatientAppConfig',
     'department_app.apps.DepartmentAppConfig',

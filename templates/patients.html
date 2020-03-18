@@ -90,6 +90,9 @@
                             <li class="nav-item ">
                                 <a class="nav-link" href="{% url 'doctors' %}"><i class="fas fa-user-plus"></i>Doctors</a>
                             </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'seeappointment' %}"><i class="fas fa-user"></i>Appointments</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'patients' %}" ><i class="fas fa-user"></i>Patients</a>
                             </li>
@@ -185,7 +188,7 @@
                                 <a href="{% url 'edit-patient' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button></a>
                               </span><p></p>
                                     <span class="table-edit">
-                                <a href="{% url 'prescribe' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Prescribe</button></a>
+                                <a href="{% url 'prescribe' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Prescription</button></a>
                               </span><p></p>
                                   <span class="table-remove">
                                      <a href="{% url 'remove-patient' val.id %}"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></a>

@@ -45,3 +45,15 @@ def edit_appointment(request, id):
 def remove_appointment(request, id):
     appointment.objects.filter(id=id).delete()
     return redirect('/seeappointment/')
+
+
+def visited_appointment(request):
+    d = appointment.objects.all()
+    context = {'appointment': d}
+    return render(request, 'visitedappointment.html', context)
+
+
+def unvisited_appointment(request):
+    d = appointment.objects.all()
+    context = {'appointment': d}
+    return render(request, 'unvisitedappointment.html', context)

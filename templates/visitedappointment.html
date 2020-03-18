@@ -176,7 +176,7 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item"><a href="{% url 'seeappointment' %}" class="nav-link">All Appointments</a></li>
+                <li class="nav-item"><a href="{% url 'seeappointment' %}" class="nav-link">All Appointments</a></li>
 	        	<li class="nav-item"><a href="{% url 'visited_appointment' %}" class="nav-link">Visited Appointments</a></li>
 	        	<li class="nav-item"><a href="{% url 'unvisited_appointment' %}" class="nav-link">Unvisited Appointments</a></li>
 	        </ul>
@@ -205,19 +205,15 @@
                           </tr>
                         </thead>
                         <tbody>
-                           {% for val, s in appointment %}
+                           {% for val in appointment %}
+                               {%  if val.visited == True %}
                              <tr>
                                 <td class="pt-3-half"  color="black">{{ s }}</td>
                                 <td class="pt-3-half"  color="black">{{ val.name }}</td>
                                 <td class="pt-3-half"  color="black">0{{ val.phone }}</td>
                                 <td class="pt-3-half"  color="black">{{ val.ltd }}</td>
                                 <td class="pt-3-half"  color="black">{{ val.msg }}</td>
-                                 {% if val.visited == False %}
-                                    <td class="pt-3-half"  color="black">No</td>
-                                  {% endif %}
-                               {% if val.visited == True %}
-                                    <td class="pt-3-half"  color="black">Yes</td>
-                                  {% endif %}
+                                <td class="pt-3-half"  color="black">Yes</td>
 
                                 <td>
                                   <span class="table-remove">
@@ -228,6 +224,8 @@
                                   </span>
                                 </td>
                               </tr>
+                                {% endif %}
+
                            {% endfor %}
 
                         </tbody>

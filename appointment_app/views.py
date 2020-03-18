@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from . models import docavailability, appointment
 from datetime import  date
+from .filters import OrderFilter
 # home View.
 def home(request):
     #print(date.today())
@@ -21,12 +22,10 @@ def addappointment(request):
         return redirect('/')
 
 def seeappointment(request):
-    d = appointment.objects.all()
-    serial = list()
-    for i in range(1, len(d) + 1):
-        serial.append(i)
-    foo = zip(d, serial)
-    context = {'appointment': foo}
+    d = appointment.objects.order_by('id')
+    myFilter = OrderFilter(request.GET,queryset=d)
+    d = myFilter.qs
+    context = {'appointment': d, 'myFilter': myFilter}
     return render(request, 'appointment.html', context)
 
 

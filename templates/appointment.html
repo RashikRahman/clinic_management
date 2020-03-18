@@ -183,10 +183,16 @@
 	      </div>
 	    </div>
 	  </nav>
-
-
-
-
+                <div class = "row">
+                    <div class="col">
+                        <div class="card card-body">
+                            <form method="get">
+                                {{ myFilter.form }}
+                                <button class="btn btn-primary" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
 
                  <div class="card-body">
 
@@ -205,19 +211,14 @@
                           </tr>
                         </thead>
                         <tbody>
-                           {% for val, s in appointment %}
+                           {% for val in appointment %}
                              <tr>
-                                <td class="pt-3-half"  color="black">{{ s }}</td>
+
                                 <td class="pt-3-half"  color="black">{{ val.name }}</td>
                                 <td class="pt-3-half"  color="black">0{{ val.phone }}</td>
                                 <td class="pt-3-half"  color="black">{{ val.ltd }}</td>
                                 <td class="pt-3-half"  color="black">{{ val.msg }}</td>
-                                 {% if val.visited == False %}
-                                    <td class="pt-3-half"  color="black">No</td>
-                                  {% endif %}
-                               {% if val.visited == True %}
-                                    <td class="pt-3-half"  color="black">Yes</td>
-                                  {% endif %}
+                                <td class="pt-3-half"  color="black">{{ val.visited }}</td>
 
                                 <td>
                                   <span class="table-remove">
@@ -238,41 +239,7 @@
 
                 <!-- Popup -->
                 <!-- ============================================================== -->
-              <section class="contact-section area-padding">
-                <div class="modal fade mt-lg-5" id="orangeModalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog modal-notify modal-warning" role="document">
-                    <!--Content-->
-                    <div class="modal-content">
-                      <!--Header-->
-                      <div class="modal-header text-center bg-info">
-                        <h4 class="modal-title white-text w-100 font-weight-bold py-2">ADD DEPARTMENT</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true" class="white-text">&times;</span>
-                        </button>
-                      </div>
 
-                      <!--Body-->
-                        <form action="{% url 'AddDept' %}" method="post">
-                            {% csrf_token %}
-                      <div class="modal-body">
-                        <div class="md-form mb-5">
-                          <i class="fas fa-hospital prefix grey-text"></i>
-                          <input type="text" id="'form1" name="dname"  class="form-control validate">
-                          <label data-error="wrong" data-success="right" for="form1">Name of Department</label>
-                        </div>
-                      </div>
-                            <div class="modal-footer justify-content-center">
-                            <input type="submit" class="btn btn-outline-success btn-rounded waves-effect" value="SAVE">
-                          </div>
-                            </form>
-                      <!--Footer-->
-
-                    </div>
-                    <!--/.Content-->
-                  </div>
-                </div>
-              </section>
             </section>
             <!-- ============================================================== -->
             <!-- footer -->
@@ -325,6 +292,19 @@
     <script src="/static/assets/libs/js/mdb.min.js"></script>
     <script src="/static/assets/libs/js/popper.min.js"></script>
     <script src="/static/assets/libs/js/all.js"></script>
+        <script>
+           var tables = document.getElementsByTagName('tbody');
+           var table = tables[tables.length-1];
+           var rows = table.rows;
+           for (var i = 0 ,td; i<rows.length; i++)
+           {
+               td=document.createElement('td');
+               td.appendChild(document.createTextNode(i+1));
+               rows[i].insertBefore(td,rows[i].firstChild);
+
+           }
+
+        </script>
         </div>
     </div>
 </body>

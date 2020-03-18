@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django_filters',
     'bootstrap4',
     'PRO_app.apps.ProAppConfig',
     'appointment_app.apps.AppointmentAppConfig',

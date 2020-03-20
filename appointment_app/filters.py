@@ -5,4 +5,4 @@ class OrderFilter(django_filters.FilterSet):
     class Meta:
         model = appointment
         feilds = '__all__'
-        exclude = ['msg','ltd']
+        exclude = ['msg', 'ltd']

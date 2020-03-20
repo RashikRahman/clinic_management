@@ -167,32 +167,14 @@
                 <div class="container card">
                   <h3 class="card-header text-center font-weight-bold text-uppercase py-4"><font color="black">Appointments</font></h3>
 
-
-
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container d-flex align-items-center">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item"><a href="{% url 'seeappointment' %}" class="nav-link">All Appointments</a></li>
-	        	<li class="nav-item"><a href="{% url 'visited_appointment' %}" class="nav-link">Visited Appointments</a></li>
-	        	<li class="nav-item"><a href="{% url 'unvisited_appointment' %}" class="nav-link">Unvisited Appointments</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-                <div class = "row">
-                    <div class="col">
-                        <div class="card card-body">
-                            <form method="get">
-                                {{ myFilter.form }}
-                                <button class="btn btn-primary" type="submit">Search</button>
-                            </form>
-                        </div>
+                    <div class="container d-flex align-items-center">
+                        <form method="get">
+                            {{ myFilter.form }}
+                            <button class="btn btn-primary" type="submit">Search</button>
+                        </form>
                     </div>
-                </div>
+                </nav>
 
                  <div class="card-body">
 
